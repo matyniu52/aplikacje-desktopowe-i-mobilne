@@ -34,6 +34,13 @@
         <Label Text="Podaj nowy owoc" />
         <Entry Text="{Binding NewFruitName}" />
         <Button Text="Dodaj owoc" Clicked="Button_Clicked_NewFruit"/>
+
+        <Picker ItemsSource="{Binding CarsCollection}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding SelectedCar}"
+                />
+
+        <Label Text="{Binding SelectedCar.Name}"/>
     </StackLayout>
 
 </ContentPage>

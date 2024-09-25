@@ -19,7 +19,25 @@ namespace ShowCollectionMauiApp
             }
         }
 
+        private Car selectedCar;
+
+        public Car SelectedCar
+        {
+            get
+            {
+                return selectedCar;
+            }
+
+            set
+            {
+                selectedCar = value;
+                OnPropertyChanged();
+            }
+        }
+
         public string NewFruitName { get; set; }
+
+        public ObservableCollection<Car> CarsCollection { get; set; }
 
         public MainPage()
         {
@@ -27,6 +45,24 @@ namespace ShowCollectionMauiApp
             FruitsCollection.Add("Banan");
             FruitsCollection.Add("Mandarynka");
             FruitsCollection.Add("Jabłko");
+
+            CarsCollection = new ObservableCollection<Car>(){
+                new Car() {
+                    Name = "Opel",
+                    Description = "Astra"
+                },
+                new Car()
+                {
+                    Name = "Buggati",
+                    Description = "Veyron"
+                },
+                new Car()
+                {
+                    Name = "Volkswagen",
+                    Description = "Polo"
+                }
+            };
+            SelectedCar = CarsCollection.First();
 
             InitializeComponent();
         }
