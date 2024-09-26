@@ -13,11 +13,13 @@
                     WidthRequest="200"
                     ItemsSource="{Binding UnitsCollection}"
                     SelectedItem="{Binding FromUnit}"
+                    ItemDisplayBinding="{Binding UnitName}"  
                 />
                 <Picker
                     WidthRequest="200"
                     ItemsSource="{Binding UnitsCollection}"
                     SelectedItem="{Binding ToUnit}"
+                    ItemDisplayBinding="{Binding UnitName}"  
                 />
             </StackLayout>
             <Entry Text="{Binding ValueToConvertFrom}" WidthRequest="420"/>

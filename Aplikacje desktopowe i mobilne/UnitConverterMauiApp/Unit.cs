@@ -8,7 +8,8 @@ namespace UnitConverterMauiApp
 {
     public class Unit
     {
-        public string unit;
-        public float value;
+        public string UnitName { get; set; }
+        public double UnitValue { get; set; }    
+
     }
 }

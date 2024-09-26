@@ -6,9 +6,8 @@ namespace UnitConverterMauiApp
     {
         public ObservableCollection<Unit> UnitsCollection { get; set; }
 
-        private string fromUnit;
-
-        public string FromUnit
+        private Unit fromUnit;
+        public Unit FromUnit
         {
             get { return fromUnit; }
             set { 
@@ -17,9 +16,9 @@ namespace UnitConverterMauiApp
             }
         }
 
-        private string toUnit;
+        private Unit toUnit;
 
-        public string ToUnit
+        public Unit ToUnit
         {
             get { return toUnit; }
             set { 
@@ -28,9 +27,9 @@ namespace UnitConverterMauiApp
             }
         }
 
-        private int valueToConvertFrom;
+        private double valueToConvertFrom;
 
-        public int ValueToConvertFrom
+        public double ValueToConvertFrom
         {
             get { return valueToConvertFrom; }
             set {
@@ -50,28 +49,37 @@ namespace UnitConverterMauiApp
 
         public MainPage()
         {
+
             UnitsCollection = new ObservableCollection<Unit>()
             {
                 new Unit()
                 {
-                    unit: "mm",
-                    value: 0.001
-                },
-                new Unit()
-                {
-                    unit: "dm",
-                    value: 0.1
-                },
-                new Unit() 
-                {
-                    unit: "m",
-                    value: 1
+                    UnitName= "mm",
+                    UnitValue= 0.000001
                 },
 
-                new Unit()
+                 new Unit()
                 {
-                    unit: "km",
-                    value: 1000
+                    UnitName= "cm",
+                    UnitValue= 0.00001
+                },
+
+                  new Unit()
+                {
+                    UnitName= "dm",
+                    UnitValue= 0.0001
+                },
+
+                   new Unit()
+                {
+                    UnitName= "m",
+                    UnitValue= 0.001
+                },
+
+                    new Unit()
+                {
+                    UnitName= "km",
+                    UnitValue= 1
                 }
             };
 
@@ -83,7 +91,9 @@ namespace UnitConverterMauiApp
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            
+            float floatValueToConvertFrom = (float)(ValueToConvertFrom * FromUnit.UnitValue);
+            float floatConvertedValue = (float)(floatValueToConvertFrom / ToUnit.UnitValue);
+            ConvertedValue = "Wartość to: " + floatConvertedValue + " " + ToUnit.UnitName;
         }
     }
 
