@@ -59,9 +59,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitConverterMauiApp", "Uni
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionViewMauiApp", "CollectionViewMauiApp\CollectionViewMauiApp.csproj", "{C572C9A3-990F-4EAE-9310-559668A8179C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmSimpleCalculatorMauiApp", "MvvmSimpleCalculatorMauiApp\MvvmSimpleCalculatorMauiApp.csproj", "{CE583421-C1DC-4669-859D-111674939DDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvvmSimpleCalculatorMauiApp", "MvvmSimpleCalculatorMauiApp\MvvmSimpleCalculatorMauiApp.csproj", "{CE583421-C1DC-4669-859D-111674939DDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmTemperatureConverterMauiApp", "MvvmTemperatureConverterMauiApp\MvvmTemperatureConverterMauiApp.csproj", "{49C59133-A18F-4F49-BADD-436A69086E73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvvmTemperatureConverterMauiApp", "MvvmTemperatureConverterMauiApp\MvvmTemperatureConverterMauiApp.csproj", "{49C59133-A18F-4F49-BADD-436A69086E73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorMauiApp", "CalculatorMauiApp\CalculatorMauiApp.csproj", "{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -314,6 +316,24 @@ Global
 		{49C59133-A18F-4F49-BADD-436A69086E73}.Release|x86.ActiveCfg = Release|Any CPU
 		{49C59133-A18F-4F49-BADD-436A69086E73}.Release|x86.Build.0 = Release|Any CPU
 		{49C59133-A18F-4F49-BADD-436A69086E73}.Release|x86.Deploy.0 = Release|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Debug|x64.Build.0 = Debug|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Debug|x86.Build.0 = Debug|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Release|x64.ActiveCfg = Release|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Release|x64.Build.0 = Release|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Release|x64.Deploy.0 = Release|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Release|x86.ActiveCfg = Release|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Release|x86.Build.0 = Release|Any CPU
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -345,6 +365,7 @@ Global
 		{C572C9A3-990F-4EAE-9310-559668A8179C} = {C126F5D7-6F32-47CD-B9F7-E54CF4C15753}
 		{CE583421-C1DC-4669-859D-111674939DDF} = {C126F5D7-6F32-47CD-B9F7-E54CF4C15753}
 		{49C59133-A18F-4F49-BADD-436A69086E73} = {C126F5D7-6F32-47CD-B9F7-E54CF4C15753}
+		{1D31E1A4-CE5C-4DAC-8941-F82F11A00700} = {C126F5D7-6F32-47CD-B9F7-E54CF4C15753}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E2DA32F-0FC6-4252-9FC0-CD664838E829}
