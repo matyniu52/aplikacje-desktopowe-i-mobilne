@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConverterMauiApp.MainPage"
+             xmlns:converters="clr-namespace:ConverterMauiApp.Converters">
+    <ContentPage.Resources>
+        <converters:GradeToTextGradeConverter x:Key="GradeToTextGradeConverter"/>
+        <converters:IsCheckedToColorConvereter x:Key="IsCheckedToColorConverter"/>
+        <converters:BoolToTextConverter x:Key="BoolToSubscriptionTextConverter" 
+                                        TrueMessage="Dziękuje"
+                                        FalseMessage="Szkoda"
+        />
+        <converters:BoolToTextConverter x:Key="BoolToAgeTextConverter" 
+                                 TrueMessage="Dziękuje"
+                                 FalseMessage="Szkoda"
+        />
+
+    </ContentPage.Resources>
+    <ScrollView>
+        <Label Text="Wprowadź ocenę ucznia"/>
+        <Entry x:Name="gradeEntry"/>
+        <Label Text="{Binding Text, Source={x:Reference gradeEntry},Converter={x:StaticResource GradeToTextConverter}}"/>
+        <Label Text="Zaznaczony - czerwony tekst"/>
+        <CheckBox
+            x:Name="colorCheckbox"
+        />
+        <Label Text="Ten kolor będzie zmieniany" 
+               TextColor="{Binding IsChecked,Source={x:Reference colorCheckbox},Converter={x:StaticResource IsCheckedToColorConverter}}"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Subskrypcja"/>
+            <CheckBox
+                x:Name="subscriptionCheckBox"    
+            />
+                <Label Text="{Binding IsChecked, Source={x:Reference subscriptionCheckBox}, Converter={x:StaticResource BoolToSubscriptionTextConverter}}"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Subskrypcja"/>
+            <CheckBox
+          x:Name="ageCheckBox"    
+      />
+            <Label Text="{Binding IsChecked, Source={x:Reference ageCheckBox}, Converter={x:StaticResource BoolToSubscriptionTextConverter}}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Zgoda Rodzica"/>
+            <CheckBox
+    x:Name="parentCheckBox"    
+/>
+            <Label>
+                <Label.Text>
+                    <Binding Source="{x:Reference parentCheckBox}" Path="IsChecked">
+                        <Binding.Converter>
+                            <converters:BoolToTextConverter TrueMessage="Pełnoletni" FalseMessage="Niepełnoletni"/>
+                        </Binding.Converter>
+                    </Binding>
+                </Label.Text>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
