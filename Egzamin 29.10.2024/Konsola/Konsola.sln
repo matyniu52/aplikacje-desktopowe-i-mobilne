@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konsola", "Konsola.csproj", "{827EF035-BAF6-4051-8ACD-77D138980C90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktopowa", "..\Desktopowa\Desktopowa.csproj", "{BE2D9807-FBEA-42A6-B253-E9434E262AE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{827EF035-BAF6-4051-8ACD-77D138980C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{827EF035-BAF6-4051-8ACD-77D138980C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{827EF035-BAF6-4051-8ACD-77D138980C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{827EF035-BAF6-4051-8ACD-77D138980C90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2D9807-FBEA-42A6-B253-E9434E262AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2D9807-FBEA-42A6-B253-E9434E262AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2D9807-FBEA-42A6-B253-E9434E262AE8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BE2D9807-FBEA-42A6-B253-E9434E262AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2D9807-FBEA-42A6-B253-E9434E262AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2D9807-FBEA-42A6-B253-E9434E262AE8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC4A74F7-6CB1-4D30-803C-2F20411BB061}
+	EndGlobalSection
+EndGlobal

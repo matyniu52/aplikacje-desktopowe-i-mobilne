@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Desktopowa.ViewModels"
+             x:Class="Desktopowa.MainPage">
+    <ContentPage.BindingContext>
+        <vm:DiceGameViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <VerticalStackLayout
+            BackgroundColor="Beige"
+            Spacing="20"
+        >
+            <Label
+                Text="Gra w kości. Autor 000000000" 
+                BackgroundColor="Brown"
+                TextColor="White"
+                Margin="0, 10"
+                FontSize="24"
+                Padding="10"
+            />
+            <Button
+                Text="RZUĆ KOŚCMI"
+                HorizontalOptions="Center"
+                Command="{Binding ThrowDiceCommand}"
+                BackgroundColor="Chocolate"
+            >
+            </Button>
+            <Grid
+                BackgroundColor="White"
+                ColumnDefinitions="*,*,*,*,*"
+                Padding="10"
+                Margin="0,10"
+            >
+                <CollectionView ItemsSource="{Binding Images}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Src}" Grid.Column="{Binding Id}" MaximumWidthRequest="64" MinimumHeightRequest="64"/>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+            <StackLayout HorizontalOptions="Center" Spacing="20">
+                <Label Text="{Binding CurrentPointsInfo}"/>
+                <Label Text="{Binding TotalPointsInfo}" HorizontalOptions="Center"/>
+                <Button
+                    Text="RESETUJ WYNIK"
+                    Command="{Binding ResetResultsCommand}"
+                    HorizontalOptions="Center"
+                    BackgroundColor="Chocolate"
+                >
+                </Button>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
